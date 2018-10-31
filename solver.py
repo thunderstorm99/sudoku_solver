@@ -3,6 +3,7 @@ import time
 
 def drawline():
     print('+-----------------------+')
+
 def drawboard():
     os.system('clear')
     for row in range(9):
@@ -90,7 +91,6 @@ def solved():
     else:
         return False
 
-#def readline():
 def newSudoku():
     print("Please input rows in following format: 123000089")
     print("Empty cells are filled with zeroes")
