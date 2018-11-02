@@ -66,7 +66,7 @@ def possibleNumbers(row, col):
     if(possibilities == 1):
         # print("Great news! There is only one number possible")
         numbers[row][col] = value
-        drawboard()
+        # drawboard()
         # time.sleep(0.1)
 
 def solver():
@@ -114,9 +114,13 @@ numbers = [[1,5,0,6,0,3,0,2,0],
            [0,8,0,0,0,0,0,4,0],
            [0,6,9,0,0,0,8,0,0]]
 
-choice = input("Choose what you want to do: \n1. demo\n2. input Sudoku\n")
+choice = int(input("Choose what you want to do: \n1. demo\n2. input Sudoku\n"))
 if(choice == 1):
+    start = time.time()
     solver()
+    stop = time.time()
+    drawboard()
+    print("It took", stop-start, "seconds")
 else:
     newSudoku()
     solver()
